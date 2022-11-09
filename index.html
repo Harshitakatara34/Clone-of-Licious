@@ -10,16 +10,20 @@
             margin:0px;
             padding:0px;
             font-size:17px;
+            /* background-color:rgb(205, 194, 194); */
         }
         #topmost{
             height:25px;
-            border:2px solid orange;
+            /* border:2px solid orange; */
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+           /* border:2px solid red;  */
+           background-color:rgb(205, 194, 194);
         }
-        #topmost>div{
+        #top1{
             height:100px;
             display:flex;
             justify-content:space-between;
-            background-color:rgb(205, 194, 194);
+            /* background-color:rgb(205, 194, 194); */
             height:25px;
 
         }
@@ -33,6 +37,7 @@
             font-size:40px;
             text-align: center;
             color:rgb(119, 115, 115);
+            
         }
             
 .toplast{
@@ -41,6 +46,7 @@
     width:40%;
     padding-top:5px;
     color:rgb(101, 99, 99);
+    /* background-color:rgb(205, 194, 194); */
 
 }
 #contactus{
@@ -57,6 +63,8 @@
         #navbar{
             display:flex;
           justify-content:space-around;
+          background-color: white; 
+          /* border:1px solid orange; */
         }
 .imagetop{
     height:100px;
@@ -65,14 +73,18 @@
 #location{
     display:flex;
           justify-content:space-around;
+          /* background-color:white */
+          background-color: white; 
 }
 #search{
     display:flex;
           justify-content:space-around;
+          background-color: white; 
 }
 .category{
     display:flex;
           justify-content:space-around;
+          background-color: white; 
 }
 .login{
     display:flex;
@@ -95,13 +107,109 @@
     height:40px;
     width:40px;
     padding-top:30px;
+    /* background-color: white; */
 }
+#frontimage{
+    height:450px;
+    width:100%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+}
+#para{
+   text-align: center;
+    background-color:rgb(205, 194, 194);
+    height:800px;
+    width:100%;
+    /* text-align: center; */
+}
+#temp{
+    padding-left:150px;
+    background-color:rgb(205, 194, 194);
+    
+}
+#temp>h2{
+color:rgb(71, 69, 69);
+font-size:40px;
+}
+#temp>p{
+    color:grey;
+    font-size:25px;
+}
+#middle{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:5px;
+    text-align:center;
+
+}
+.image2{
+    height:200px;
+    width:300px;
+}
+.font2{
+    font-size:30px;
+}
+#container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align:center;
+    margin-top:5px;
+   gap:20px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+#container2{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    /* text-align:center;
+    margin-top:5px;
+   gap:20px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
+    gap:20px;
+    height:400px;
+    /* border:2px solid green; */
+}
+#container2>div>img{
+    height:300px;
+    width:400px;
+}
+#container2>div>p{
+    font-size:25px;
+    color:rgb(45, 44, 44);
+}
+#container>div{
+    box-shadow: rgba(17, 17, 17, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    
+    
+}
+h3{
+    font-size:60px;
+    color:rgb(71, 70, 70);
+}
+  #bottom{
+    /* border:1px solid red; */
+    margin-top:20px;
+   text-align: center;
+  }
+  #bottom>img{
+    width:95%;
+    height:450px;
+  }
+  #lastpart{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:10px;
+  }
+  #lastheading{
+    font-size:60px;
+    color:rgb(71, 70, 70);
+}
+  
     </style>
 </head>
 <body>
    
     <div id="topmost">
-        <div>
+        <div id="top1">
         <div class="topsection">
             <p>Why Luscious?</p>
             <p>Download App</p>
@@ -120,6 +228,9 @@
           </div>
         </div>
         </div>
+
+
+
       <div id="navbar">
         <div>
             <img class="imagetop" src="data:image/png;base64,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"alt="">
@@ -152,10 +263,150 @@
                 </div>
         </div>
       </div>
-  
-  
     </div>
         </div>
+      <div>
+        <img id="frontimage"src="https://d2407na1z3fc0t.cloudfront.net/Slider/banner_63630e9d6ba0e"/>
+      </div>
+      <div id="temp">
+        <h2>Shop by categories</h2>
+        <p>Freshest meats just for you</p>
+        </div>
+      <div id="para">
+       
+        
+       
+        <div id="middle">
+            <div>
+                <img class="image2"src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/cb6e4eb8-6aec-7872-1638-0c2cf7970b71/original/Todays_Deals.png"/>
+                <p class="font2">Today's Deals</p>
+            </div>
+        <div>
+            <img  class="image2" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/34466dbd-a515-edd1-3e99-05000f217cb6/original/Chicken_(2).png"/>
+            <p class="font2">Chicken</p>
+
+        </div>
+         <div>
+            <img  class="image2" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/caac432f-545f-f03f-ce10-3b911916da70/original/FIsh_(1).png"/>
+            <p class="font2">Fish & Seafood</p>
+         </div>
+           <div>
+            <img  class="image2"src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/3a3d173d-5537-dafc-0be4-dec0791dcd24/original/MUT.png"/>
+            <p class="font2">Mutton</p>
+           </div>
       
+         <div>
+            <img  class="image2"  src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/21653c3a-4d6d-da71-2432-6833b88e9629/original/RC.png"/>
+            <p class="font2">Ready to Cook</p>
+           </div>
+           <div>
+            <img  class="image2" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/f4053965-f199-80a0-2551-d85d712574e2/original/Prawn_(2).png"/>
+            <p class="font2">Prawns</p>
+           </div>
+        <div>
+            <img  class="image2" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/49a8dd0c-7254-0b89-b348-b57281c76f5a/original/Coldcuts_(2).png"/>
+            <p class="font2">Cold Cuts</p>
+        </div>
+        <div>
+         <img    class="image2" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/d9a97969-ebd7-977c-e676-b343a18d7318/original/SPD.png"/>
+        <p class="font2">Spreads</p>
+        </div>
+        <div>
+            <img class="image2" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/1bd08fae-c971-390a-ce8a-6f6502f5bd0d/original/Eggs_(1).png"/>
+        <p class="font2">Eggs</p>
+        </div>
+        <div>
+            <img class="image2" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/0b7ccd0f-0811-c38b-5420-0317c8006bda/original/Biryani_(2).png"/>
+            <p class="font2">Biryani & Kabab</p>
+        </div>
+        <div>
+            <img class="image2"src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/69b72338-4180-2631-b175-04265b1e5c7a/original/Combo_(2).png"/>
+            <p class="font2">Combo</p>
+        </div>
+       
+       <div>
+        <img class="image2"src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/66e49926-d949-dfb3-2e79-8052d07f0a3b/original/PBM_6_(8).png"/>
+       <p class="font2">Plant-based-Meat</p> 
+    </div>
+       
+        </div>
+      </div>
+    <div id="container"></div>
+    <h3>Check out your vlog</h3>
+    <div id="container2">
+        <div>
+            <img src="https://www.licious.in/blog/wp-content/uploads/2022/10/shutterstock_521679751.jpg"/>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum deleniti repudiandae sunt laboriosam, architecto ex!</p>
+        </div>
+      <div>
+        <img src="https://www.licious.in/blog/wp-content/uploads/2022/10/shutterstock_1437076970.jpg"/>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia placeat tempore fugiat.</p>
+      </div>
+      <div>
+        <img src="https://www.licious.in/blog/wp-content/uploads/2022/10/shutterstock_336645890-5.jpg"/>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum illo enim alias.</p>
+      </div>
+    </div>
+
+    <div id="bottom">
+        <img src="https://d2407na1z3fc0t.cloudfront.net/homepageStaticBanner/homepageStaticBanner_62a34b8cba7db"/>
+    </div>
+   <div>
+    <h1 id="lastheading">IN the News</h1>
+    <div id="lastpart">
+        <div>
+            <img src="https://d2407na1z3fc0t.cloudfront.net/inTheNews/35/inthenews_62aadde78bdae"/>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, minus.</p>
+        </div>
+        <div>
+            <img src="https://d2407na1z3fc0t.cloudfront.net/inTheNews/35/inthenews_62aadde78bdae"/>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, minus.</p>
+        </div>
+        <div>
+            <img height="175px"width="250px"src="https://d2407na1z3fc0t.cloudfront.net/inTheNews/37/inthenews_62aae0b741820"/>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div>
+            <img height="175px"width="250px"src="https://d2407na1z3fc0t.cloudfront.net/inTheNews/38/inthenews_62aae10540001"/>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div>
+            <img src="https://d2407na1z3fc0t.cloudfront.net/inTheNews/35/inthenews_62aadde78bdae"/>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, minus.</p>
+        </div>
+    </div>
+   </div>
 </body>
 </html>
+<script>
+    let bag=[]
+  fetch("./data.json").then((res)=>(res.json()))
+   .then((data)=>{
+    bag=data;
+    displayCard(data)
+   })
+    // .then((res)=>res.json())
+    // .then((data)=>{
+    //     console.log(data)
+    // });
+    function displayCard(data){
+      data.forEach(function(elem){
+        let div=document.createElement("div")
+        let image=document.createElement("img")
+        image.setAttribute("src",elem.image)
+        let heading=document.createElement("h2")
+        heading.innerText=elem.heading
+        let para=document.createElement("p")
+        para.innerText=elem.para
+        let price=document.createElement("p")
+        price.innerText=elem.price
+        let quant=document.createElement("p")
+        quant.innerText=elem.quantity
+        let cart=document.createElement("button")
+        cart.innerText="Add To Cart"
+        div.append(image,heading,para,price,quant,cart)
+        document.querySelector("#container").append(div)
+      })
+    }
+  
+</script>
