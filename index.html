@@ -153,7 +153,7 @@ font-size:40px;
     display:grid;
     grid-template-columns: repeat(3,1fr);
     text-align:center;
-    margin-top:5px;
+    margin-top:15px;
    gap:20px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
@@ -166,6 +166,7 @@ font-size:40px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
     gap:20px;
     height:400px;
+    text-align:center;
     /* border:2px solid green; */
 }
 #container2>div>img{
@@ -203,7 +204,52 @@ h3{
     font-size:60px;
     color:rgb(71, 70, 70);
 }
-  
+#down{
+    display:flex;
+    justify-content:space-around;
+    margin-top:30px;
+}
+#down>div>p{
+    color:rgb(87, 78, 78);
+    height:50px;
+    font-size:25px;
+}
+#down>div>h1{
+    color:rgb(87, 78, 78);
+    /* height:50px; */
+    font-size:25px;
+}
+
+#top8{
+    margin-top:30px;
+    padding-left:80px;
+   
+}
+.login>a{
+    font-size:30px;
+    margin-top:25px;
+    color: #d11243;
+}
+.Cart>a{
+    font-size:30px;
+    margin-top:25px;
+    color: #d11243;
+}
+  #container>div>button{
+    border:none;
+    /* background-color:rgb(139, 0, 139); */
+    background-color: #d11243;
+    height:30px;
+    width:100px;
+    border-radius: 10px;
+    color:white;
+    font-size:15px;
+    /* padding-bottom:5px; */
+  }
+  #container>div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-bottom:10px;
+  }
     </style>
 </head>
 <body>
@@ -244,7 +290,7 @@ h3{
 
             </div>
             <div id="search">
-                <input id="searchbar"type="text"placeholder="Search for any delicious product">
+                <input oninput="search()"id="searchbar"type="text"placeholder="Search for any delicious product"/>
                 <img  class="image" src="https://www.licious.in/img/rebranding/search_icon.svg">
             </div>
             <!-- <div class="" -->
@@ -254,12 +300,12 @@ h3{
                 </div>
                 <div class="login">
                     <img  class="image"  src="https://www.licious.in/img/rebranding/profile_icon.svg"/>
-                    <p class="font">Login</p>
+                    <a href="./signup.html">Login</a>
                 </div>
                
                 <div class="Cart">
                     <img  class="image"  src="https://www.licious.in/img/rebranding/cart_icon.svg"/>
-                    <p class="font">Cart</p>
+                   <a href="./cart.html">Cart</a>
                 </div>
         </div>
       </div>
@@ -268,6 +314,7 @@ h3{
       <div>
         <img id="frontimage"src="https://d2407na1z3fc0t.cloudfront.net/Slider/banner_63630e9d6ba0e"/>
       </div>
+      <div id="container"></div>
       <div id="temp">
         <h2>Shop by categories</h2>
         <p>Freshest meats just for you</p>
@@ -331,7 +378,7 @@ h3{
        
         </div>
       </div>
-    <div id="container"></div>
+   
     <h3>Check out your vlog</h3>
     <div id="container2">
         <div>
@@ -376,6 +423,55 @@ h3{
         </div>
     </div>
    </div>
+   <div id="top8">
+    <img src="https://www.licious.in/img/rebranding/licious-logo.svg"/>
+    <div id="down">
+        <div>
+            <p>
+                Useful links
+            </p>
+            <p>refer & earn</p>
+            <p>licious cash&cash+</p>
+            <p>Carreers</p>
+            <p>BLOG</p>
+            <p>Campaign</p>
+            <p>Buy Bountry Guidlines</p>
+            <p>About us</p>
+            <p>FSSC 22000 Certification</p>
+            <p>FSSAI licenses</p>
+            <p>Sitemap</p>
+        </div>
+        <div>
+            <h1>EXPERIENCE LICIOUS APP ON</h1>
+            <h1>MOBILE</h1>
+            <img src="https://www.licious.in/img/rebranding/app-store-new.svg"/>
+            <img src="https://www.licious.in/img/rebranding/play-store-new.png"/>
+
+        </div>
+        <div>
+            <h1>CONTACT US </h1>
+            <p>Call:1800-4190-7800</p>
+            <p>Talkus@licious.com</p>
+            <h1>
+                REGISTERED OFFICCE ADDRESS:
+            </h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+            <p>t&c</p>
+            <p>FAQ</p>
+        <p>privacy policy</p>   
+        <p>Lorem, ipsum.</p>
+        <p>Lorem ipsum dolor sit.</p>
+         </div>
+         <div>
+            <img height="40px"width="150px" src="https://www.licious.in/img/rebranding/3-dsecure.png"/>
+         </div>
+         <!-- <div>
+            <img src="https://www.licious.in/img/rebranding/3-dsecure.png"/>
+         </div> -->
+    </div>
+   </div>
 </body>
 </html>
 <script>
@@ -389,24 +485,45 @@ h3{
     // .then((data)=>{
     //     console.log(data)
     // });
+    let cartitems=JSON.parse(localStorage.getItem("cartproducts"))||[]
     function displayCard(data){
+
       data.forEach(function(elem){
+        
         let div=document.createElement("div")
         let image=document.createElement("img")
         image.setAttribute("src",elem.image)
-        let heading=document.createElement("h2")
+        let heading=document.createElement("h1")
         heading.innerText=elem.heading
-        let para=document.createElement("p")
+        let para=document.createElement("h2")
         para.innerText=elem.para
-        let price=document.createElement("p")
+        let price=document.createElement("h2")
         price.innerText=elem.price
-        let quant=document.createElement("p")
+        let quant=document.createElement("h2")
         quant.innerText=elem.quantity
         let cart=document.createElement("button")
         cart.innerText="Add To Cart"
-        div.append(image,heading,para,price,quant,cart)
-        document.querySelector("#container").append(div)
-      })
+        cart.addEventListener("click",function(){
+        cartitems.push(elem);
+        localStorage.setItem("cartproducts",JSON.stringify(cartitems));
+        })
+        div.append(image,heading,para,price,quant,cart);
+        document.querySelector("#container").append(div);
+    
+        })
     }
+    function search(){
+            let q=document.querySelector("input").value;
+            console.log(q)
+            let newData=bag.filter(function elem(){
+                return elem.heading.toLowerCase().includes(q.toLowerCase())
+            
+            });
+            displayCard(newData);
+        }
+
+    // document.querySelector("#login").addEventListener(click,function(){
+    //    let x= document.createElement("input")
+    // })
   
 </script>

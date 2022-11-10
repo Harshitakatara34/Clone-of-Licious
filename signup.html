@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #loginpage{
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEX4+f6D1ppdAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=");
+    background-repeat: no-repeat;
+   background-size:80% 600px;
+   
+   /* background-origin: border-box; */
+   background-position: 200px;
+   text-align: center;
+   height:600px;
+   width:80%;
+   margin-top:20px;
+   padding-left:100px;
+    }
+     body{
+   
+   background-color: rgb(247, 206, 226);
+}
+#box{
+    height:60px;
+    width:500px;
+    background-color:rgb(241, 201, 208);
+    border:none;
+    margin-top:20px;
+    font-size:40px;
+    text-align:center;
+    border-radius: 10px;
+}
+#loginpage>h1{
+   font-size:80px;
+    text-align:center;
+}
+#loginpage>h2{
+    font-size:40px;
+}
+#loginpage>button{
+    height:65px;
+    width:400px;
+    margin-top:60px;
+    background-color:magenta;
+    color:white;
+    font-size:40px;
+    border:none;
+    border-radius: 10px;
+}
+#link{
+    font-size:40px;
+    color: #d11243;
+}
+#loginpage>p{
+    font-size:30px;
+
+}
+    </style>
+<body>
+    <form>
+        <div id="loginpage">
+        
+            <h1>Sign In/Sign Up</h1>
+            <h2>Enter Mobile Number</h2>
+            <input id="box"type="Number"placeholder="Enter mobile number">
+            <br>
+            <button>Submit</button>
+           <p>If you already have account</p>
+           <a id="link"href="login.html">Login</a>
+       
+    </div>
+  
+    </form>
+  
+</body>
+</html>
+<script>
+    // let form=document.getElementById("signup-form")
+    let form=document.querySelector("#loginpage")
+
+let alldata=JSON.parse(localStorage.getItem("login-data")) || []
+
+form.addEventListener("submit",function(event){
+    event.preventDefault()
+    let obj={
+        number:form.number.value,
+        // email:form.email.value,
+        // phone:form.phone.value,
+        // password:form.password.value
+    }
+
+    alldata.push(obj)
+
+    localStorage.setItem("login-data",JSON.stringify(alldata))
+
+    console.log(alldata)
+
+    //reseting the values after signup
+
+    // form.email.value=""
+    // form.phone.value=""
+    // form.password.value=""
+    form.number.value=""
+})
+</script>

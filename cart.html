@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(244, 216, 220);
+        }
+        #bag2{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:10px;
+        }
+        #bag2>div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-bottom:10px;
+    padding-left:20px;
+    background-color: white;
+    border-radius:10px;
+   
+  }
+  #bag2>div>image{
+    padding-left:40px;
+  }
+    </style>
+</head>
+<body>
+    <div id="bag2">
+        <!-- <h1>y8762r95kjfsjbhfhjq</h1> -->
+    </div>
+</body>
+</html>
+<script>
+//     let div=document.createElement("div")
+//         let image=document.createElement("img")
+//         image.setAttribute("src",elem.image)
+//         let title=document.createElement("h2")
+//         title.innerText=elem.title;
+//         let price=document.createElement("p")
+//         price.innerText=elem.price;
+//         let desc=document.createElement("p")
+//         desc.innerText=elem.description;
+//         let category=document.createElement("p")
+//         category.innerText=elem.category;
+//         // let btn=document.createElement("button")
+//         // btn.innerText="Add to cart"
+//         // btn.addEventListener("click")
+//         div.append(image,title,price,desc,category)
+//         document.querySelector("#container").append(div)
+//         let totalcost=cartitems.reduce((acc,ele)=>acc+ele.price,0)
+//      document.querySelector("h2").innerText=totalcost;
+//     })
+// }
+let cartitems=JSON.parse(localStorage.getItem("cartproducts"))
+console.log(cartitems)
+displayCard(cartitems)
+
+function displayCard(cartitems){
+    document.querySelector("#bag2").innerText="";
+    cartitems.forEach(function(elem){
+        let div=document.createElement("div")
+        let image=document.createElement("img")
+        image.setAttribute("src",elem.image)
+        let heading=document.createElement("h1")
+        heading.innerText=elem.heading
+        let para=document.createElement("h2")
+        para.innerText=elem.para
+        let price=document.createElement("h2")
+        price.innerText=elem.price
+        let quant=document.createElement("h2")
+        quant.innerText=elem.quantity
+        div.append(image,heading,para,price,quant)
+        document.querySelector("#bag2").append(div)
+})
+    
+       
+}
+</script>
