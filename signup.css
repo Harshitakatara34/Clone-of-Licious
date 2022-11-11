@@ -1,0 +1,92 @@
+
+    /* #loginpage{
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEX4+f6D1ppdAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=");
+    background-repeat: no-repeat;
+   background-size:85% 900px;
+   
+   /* background-origin: border-box; */
+   /* background-position: 200px;
+   text-align: center;
+   height:600px;
+   width:80%;
+   margin-top:20px;
+   padding-left:100px;
+    }
+     body{
+   
+   background-color: rgb(247, 206, 226); */
+#top>h1{
+   font-size:50px;
+   margin-left:30px;
+    /* text-align:center; */
+}
+#login>#top>button{
+    height:50px;
+    width:350px;
+    margin-top:30px;
+    background-color: #d11243;
+    color:white;
+    font-size:20px;
+    border:none;
+    margin-left:30px;
+    /* border-radius: 10px; */
+}
+#login>#top{
+    /* text-align: center; */
+    margin-top:100px;
+    /* height:500px;
+    width:400px; */
+}
+#top{
+    height:1600px;
+    width:400px;
+    background-color: white;
+   position:fixed;
+   padding-top:150px;
+   margin-left:30px;
+}
+#login>#top>#number{
+    height:50px;
+    width:350px;
+    text-align: center;
+    margin-left:25px;
+    margin-top:30px;
+    text-align: center;
+  
+}
+#login>#top>#pass{
+    height:50px;
+    width:350px;
+    margin-top:30px;
+    text-align: center;
+    margin-left:25px;
+  
+    
+}
+#top>p>span{
+    color:#0db2f3;
+}
+#top>p{
+    color:rgb(105, 101, 101);
+    margin-top:20px;
+}
+#top>span,a{
+   margin-left:100px;
+}
+#top>a{
+    color:#d11243;
+}
+#last{
+    margin:auto;
+    padding-left:800px;
+}
+#temp{
+    margin:auto;
+}
+#last>span{
+    color:rgb(105, 101, 101);
+}
+#special{
+    margin-top:30px;
+    font-size:25px;
+}

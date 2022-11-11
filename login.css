@@ -1,0 +1,59 @@
+
+#login>h1{
+font-size:50px;
+/* text-align:center; */
+}
+#login>#top>button{
+height:50px;
+width:480px;
+margin-top:10px;
+background-color: #d11243;
+color:white;
+font-size:20px;
+border:none;
+/* border-radius: 10px; */
+}
+#login>#top{
+text-align: center;
+margin-top:50px;
+/* height:500px;
+width:400px; */
+}
+#top{
+height: 30px;
+width:90%;
+background-color: white;
+/* border:2px solid red; */
+
+margin:auto;
+}
+#login>#top>#number{
+height:50px;
+width:480px;
+
+}
+#login>#top>#pass{
+height:50px;
+width:480px;
+margin-top:10px;
+
+}
+#top>p>span{
+color:#0db2f3;
+}
+#top>p{
+color:rgb(105, 101, 101);
+}
+#top>span{
+margin-top:10px;
+}
+#last{
+margin:auto;
+padding-left:800px;
+}
+#temp{
+margin:auto;
+}
+#last>span{
+color:rgb(105, 101, 101);
+}

@@ -5,80 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            background-color:rgb(247, 206, 226);
-            text-align:center;
-            margin-top:300px;
-            padding-left:550px;
-        }
-        #login{
-            height:30px;
-            width:200px;
-            text-align:center;
-            font-size:20px;
-            border:none;
-            background-color:rgb(247, 206, 226);
-            margin-top:15px;
-        }
-       #but{
-        /* margin-top:20px; */
-        height:25px;
-        width:100px;
-        font-size:20px;
-        border:none;
-        background-color:rgb(247, 206, 226); 
-        margin-top:40px;
-       }
-       form{
-        background-color:white;
-        height:300px;
-        width:50%;
-        border-radius:10px;
-       }
-       form>h1{
-        padding-top:50px;
-        font-size:50px;
-       }
-    </style>
-</head>
-<body>
-    <form>
-        <h1>Enter Mobile Number</h1>
-        <input id="login" type="Number"placeholder="Enter mobile number">
-        <br>
-        <button id="but">login</button>
-    </form>
  
+<body>
+    <form id="login">
+        <div id="top">
+        
+            <h1>Login here</h1>
+            <!-- <h2>Enter Mobile Number</h2> -->
+            <input id="number"type="Number"placeholder="Enter mobile number">
+            <br>
+            <input id="pass" type="password"placeholder="enter password">
+            <br>
+            <!-- <p>By creating account , I agree to the licious <span>Terms of Use,Privacy Policy,and licious Reward Terms and Conditions</span></p> -->
+            <button>LOGIN</button>
+            <br>
+           
+       
+    </div>
+    
+    </form>
+ <script src="login.js"></script>
+<link rel="stylesheet"href="login.css"/>
 </body>
 </html>
-<script>
-    let form=document.getElementById("but")
-
-     let alldata=JSON.parse(localStorage.getItem("login-data"))
-    
-    form.addEventListener("submit",function(event){
-        event.preventDefault()
-        let obj={
-          number:form.name.value,
-        }
-    
-        let flag=false
-    
-        for(let i=0;i<alldata.length;i++){
-            if(obj.number==alldata[i].number ){
-                flag=true
-       }
-    
-        }
-    
-        if(flag==true){
-         alert(Hi)
-      }else{
-    alert("invalid User")
-    }
-    
-     form.number.value=""
-    })
-
-</script>
