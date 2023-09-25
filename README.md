@@ -14,7 +14,7 @@ Chicken, your premier online marketplace for sourcing top-quality poultry and fi
  Chicken Shop has been built using the following technologies:
 HTML,CSS,Javascript
 ## Credits
-This project was created by Me
+Individual Project
 <br>
 ## Installation
 To install and run this project on your local machine, follow these steps:
