@@ -5,6 +5,8 @@ Construct Week Project of WEB-101 - Clone of Licious.com
 Chicken, your premier online marketplace for sourcing top-quality poultry and fish products at the most competitive prices. Our diverse range of offerings ensures that you can place orders conveniently and enjoy doorstep delivery of the freshest and finest options for your culinary delights.This is an Individual Project build in masai in a span of 3 days.
 ---
 :computer:Unique Project Name  :- Chicken
+![img4](https://github.com/Harshitakatara34/Clone-of-Licious/assets/112870595/a4c90878-0f7b-43f7-a79e-740953f0ee30)
+
 ---
 :star:Deployed Link:-https://superb-haupia-a7c7f2.netlify.app/
 ---
